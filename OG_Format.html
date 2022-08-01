@@ -1,0 +1,2429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="Asciidoctor 2.0.10">
+<title>Background</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
+<style>
+/* Asciidoctor default stylesheet | MIT License | https://asciidoctor.org */
+/* Uncomment @import statement to use as custom stylesheet */
+/*@import "https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700";*/
+article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}
+audio,video{display:inline-block}
+audio:not([controls]){display:none;height:0}
+html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}
+a{background:none}
+a:focus{outline:thin dotted}
+a:active,a:hover{outline:0}
+h1{font-size:2em;margin:.67em 0}
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+dfn{font-style:italic}
+hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}
+mark{background:#ff0;color:#000}
+code,kbd,pre,samp{font-family:monospace;font-size:1em}
+pre{white-space:pre-wrap}
+q{quotes:"\201C" "\201D" "\2018" "\2019"}
+small{font-size:80%}
+sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}
+sup{top:-.5em}
+sub{bottom:-.25em}
+img{border:0}
+svg:not(:root){overflow:hidden}
+figure{margin:0}
+fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}
+legend{border:0;padding:0}
+button,input,select,textarea{font-family:inherit;font-size:100%;margin:0}
+button,input{line-height:normal}
+button,select{text-transform:none}
+button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}
+button[disabled],html input[disabled]{cursor:default}
+input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}
+button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}
+textarea{overflow:auto;vertical-align:top}
+table{border-collapse:collapse;border-spacing:0}
+*,*::before,*::after{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}
+html,body{font-size:100%}
+body{background:#fff;color:rgba(0,0,0,.8);padding:0;margin:0;font-family:"Noto Serif","DejaVu Serif",serif;font-weight:400;font-style:normal;line-height:1;position:relative;cursor:auto;tab-size:4;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}
+a:hover{cursor:pointer}
+img,object,embed{max-width:100%;height:auto}
+object,embed{height:100%}
+img{-ms-interpolation-mode:bicubic}
+.left{float:left!important}
+.right{float:right!important}
+.text-left{text-align:left!important}
+.text-right{text-align:right!important}
+.text-center{text-align:center!important}
+.text-justify{text-align:justify!important}
+.hide{display:none}
+img,object,svg{display:inline-block;vertical-align:middle}
+textarea{height:auto;min-height:50px}
+select{width:100%}
+.center{margin-left:auto;margin-right:auto}
+.stretch{width:100%}
+.subheader,.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{line-height:1.45;color:#7a2518;font-weight:400;margin-top:0;margin-bottom:.25em}
+div,dl,dt,dd,ul,ol,li,h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6,pre,form,p,blockquote,th,td{margin:0;padding:0;direction:ltr}
+a{color:#2156a5;text-decoration:underline;line-height:inherit}
+a:hover,a:focus{color:#1d4b8f}
+a img{border:0}
+p{font-family:inherit;font-weight:400;font-size:1em;line-height:1.6;margin-bottom:1.25em;text-rendering:optimizeLegibility}
+p aside{font-size:.875em;line-height:1.35;font-style:italic}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{font-family:"Open Sans","DejaVu Sans",sans-serif;font-weight:300;font-style:normal;color:#ba3925;text-rendering:optimizeLegibility;margin-top:1em;margin-bottom:.5em;line-height:1.0125em}
+h1 small,h2 small,h3 small,#toctitle small,.sidebarblock>.content>.title small,h4 small,h5 small,h6 small{font-size:60%;color:#e99b8f;line-height:0}
+h1{font-size:2.125em}
+h2{font-size:1.6875em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.375em}
+h4,h5{font-size:1.125em}
+h6{font-size:1em}
+hr{border:solid #dddddf;border-width:1px 0 0;clear:both;margin:1.25em 0 1.1875em;height:0}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:60%;line-height:inherit}
+code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;color:rgba(0,0,0,.9)}
+ul,ol,dl{font-size:1em;line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
+ul,ol{margin-left:1.5em}
+ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0;font-size:1em}
+ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
+ul.square{list-style-type:square}
+ul.circle{list-style-type:circle}
+ul.disc{list-style-type:disc}
+ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
+dl dt{margin-bottom:.3125em;font-weight:bold}
+dl dd{margin-bottom:1.25em}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
+abbr{text-transform:none}
+blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
+blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
+blockquote cite::before{content:"\2014 \0020"}
+blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
+blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
+@media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
+h1{font-size:2.75em}
+h2{font-size:2.3125em}
+h3,#toctitle,.sidebarblock>.content>.title{font-size:1.6875em}
+h4{font-size:1.4375em}}
+table{background:#fff;margin-bottom:1.25em;border:solid 1px #dedede}
+table thead,table tfoot{background:#f7f8f7}
+table thead tr th,table thead tr td,table tfoot tr th,table tfoot tr td{padding:.5em .625em .625em;font-size:inherit;color:rgba(0,0,0,.8);text-align:left}
+table tr th,table tr td{padding:.5625em .625em;font-size:inherit;color:rgba(0,0,0,.8)}
+table tr.even,table tr.alt{background:#f8f8f7}
+table thead tr th,table tfoot tr th,table tbody tr td,table tr td,table tfoot tr td{display:table-cell;line-height:1.6}
+h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2;word-spacing:-.05em}
+h1 strong,h2 strong,h3 strong,#toctitle strong,.sidebarblock>.content>.title strong,h4 strong,h5 strong,h6 strong{font-weight:400}
+.clearfix::before,.clearfix::after,.float-group::before,.float-group::after{content:" ";display:table}
+.clearfix::after,.float-group::after{clear:both}
+:not(pre):not([class^=L])>code{font-size:.9375em;font-style:normal!important;letter-spacing:0;padding:.1em .5ex;word-spacing:-.15em;background:#f7f7f8;-webkit-border-radius:4px;border-radius:4px;line-height:1.45;text-rendering:optimizeSpeed;word-wrap:break-word}
+:not(pre)>code.nobreak{word-wrap:normal}
+:not(pre)>code.nowrap{white-space:nowrap}
+pre{color:rgba(0,0,0,.9);font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;line-height:1.45;text-rendering:optimizeSpeed}
+pre code,pre pre{color:inherit;font-size:inherit;line-height:inherit}
+pre>code{display:block}
+pre.nowrap,pre.nowrap pre{white-space:pre;word-wrap:normal}
+em em{font-style:normal}
+strong strong{font-weight:400}
+.keyseq{color:rgba(51,51,51,.8)}
+kbd{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;display:inline-block;color:rgba(0,0,0,.8);font-size:.65em;line-height:1.45;background:#f7f7f7;border:1px solid #ccc;-webkit-border-radius:3px;border-radius:3px;-webkit-box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em white inset;box-shadow:0 1px 0 rgba(0,0,0,.2),0 0 0 .1em #fff inset;margin:0 .15em;padding:.2em .5em;vertical-align:middle;position:relative;top:-.1em;white-space:nowrap}
+.keyseq kbd:first-child{margin-left:0}
+.keyseq kbd:last-child{margin-right:0}
+.menuseq,.menuref{color:#000}
+.menuseq b:not(.caret),.menuref{font-weight:inherit}
+.menuseq{word-spacing:-.02em}
+.menuseq b.caret{font-size:1.25em;line-height:.8}
+.menuseq i.caret{font-weight:bold;text-align:center;width:.45em}
+b.button::before,b.button::after{position:relative;top:-1px;font-weight:400}
+b.button::before{content:"[";padding:0 3px 0 2px}
+b.button::after{content:"]";padding:0 2px 0 3px}
+p a>code:hover{color:rgba(0,0,0,.9)}
+#header,#content,#footnotes,#footer{width:100%;margin-left:auto;margin-right:auto;margin-top:0;margin-bottom:0;max-width:62.5em;*zoom:1;position:relative;padding-left:.9375em;padding-right:.9375em}
+#header::before,#header::after,#content::before,#content::after,#footnotes::before,#footnotes::after,#footer::before,#footer::after{content:" ";display:table}
+#header::after,#content::after,#footnotes::after,#footer::after{clear:both}
+#content{margin-top:1.25em}
+#content::before{content:none}
+#header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
+#header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
+#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:-ms-flexbox;display:-webkit-flex;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap}
+#header .details span:first-child{margin-left:-.125em}
+#header .details span.email a{color:rgba(0,0,0,.85)}
+#header .details br{display:none}
+#header .details br+span::before{content:"\00a0\2013\00a0"}
+#header .details br+span.author::before{content:"\00a0\22c5\00a0";color:rgba(0,0,0,.85)}
+#header .details br+span#revremark::before{content:"\00a0|\00a0"}
+#header #revnumber{text-transform:capitalize}
+#header #revnumber::after{content:"\00a0"}
+#content>h1:first-child:not([class]){color:rgba(0,0,0,.85);border-bottom:1px solid #dddddf;padding-bottom:8px;margin-top:0;padding-top:1rem;margin-bottom:1.25rem}
+#toc{border-bottom:1px solid #e7e7e9;padding-bottom:.5em}
+#toc>ul{margin-left:.125em}
+#toc ul.sectlevel0>li>a{font-style:italic}
+#toc ul.sectlevel0 ul.sectlevel1{margin:.5em 0}
+#toc ul{font-family:"Open Sans","DejaVu Sans",sans-serif;list-style-type:none}
+#toc li{line-height:1.3334;margin-top:.3334em}
+#toc a{text-decoration:none}
+#toc a:active{text-decoration:underline}
+#toctitle{color:#7a2518;font-size:1.2em}
+@media screen and (min-width:768px){#toctitle{font-size:1.375em}
+body.toc2{padding-left:15em;padding-right:0}
+#toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
+#toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
+#toc.toc2>ul{font-size:.9em;margin-bottom:0}
+#toc.toc2 ul ul{margin-left:0;padding-left:1em}
+#toc.toc2 ul.sectlevel0 ul.sectlevel1{padding-left:0;margin-top:.5em;margin-bottom:.5em}
+body.toc2.toc-right{padding-left:0;padding-right:15em}
+body.toc2.toc-right #toc.toc2{border-right-width:0;border-left:1px solid #e7e7e9;left:auto;right:0}}
+@media screen and (min-width:1280px){body.toc2{padding-left:20em;padding-right:0}
+#toc.toc2{width:20em}
+#toc.toc2 #toctitle{font-size:1.375em}
+#toc.toc2>ul{font-size:.95em}
+#toc.toc2 ul ul{padding-left:1.25em}
+body.toc2.toc-right{padding-left:0;padding-right:20em}}
+#content #toc{border-style:solid;border-width:1px;border-color:#e0e0dc;margin-bottom:1.25em;padding:1.25em;background:#f8f8f7;-webkit-border-radius:4px;border-radius:4px}
+#content #toc>:first-child{margin-top:0}
+#content #toc>:last-child{margin-bottom:0}
+#footer{max-width:100%;background:rgba(0,0,0,.8);padding:1.25em}
+#footer-text{color:rgba(255,255,255,.8);line-height:1.44}
+#content{margin-bottom:.625em}
+.sect1{padding-bottom:.625em}
+@media screen and (min-width:768px){#content{margin-bottom:1.25em}
+.sect1{padding-bottom:1.25em}}
+.sect1:last-child{padding-bottom:0}
+.sect1+.sect1{border-top:1px solid #e7e7e9}
+#content h1>a.anchor,h2>a.anchor,h3>a.anchor,#toctitle>a.anchor,.sidebarblock>.content>.title>a.anchor,h4>a.anchor,h5>a.anchor,h6>a.anchor{position:absolute;z-index:1001;width:1.5ex;margin-left:-1.5ex;display:block;text-decoration:none!important;visibility:hidden;text-align:center;font-weight:400}
+#content h1>a.anchor::before,h2>a.anchor::before,h3>a.anchor::before,#toctitle>a.anchor::before,.sidebarblock>.content>.title>a.anchor::before,h4>a.anchor::before,h5>a.anchor::before,h6>a.anchor::before{content:"\00A7";font-size:.85em;display:block;padding-top:.1em}
+#content h1:hover>a.anchor,#content h1>a.anchor:hover,h2:hover>a.anchor,h2>a.anchor:hover,h3:hover>a.anchor,#toctitle:hover>a.anchor,.sidebarblock>.content>.title:hover>a.anchor,h3>a.anchor:hover,#toctitle>a.anchor:hover,.sidebarblock>.content>.title>a.anchor:hover,h4:hover>a.anchor,h4>a.anchor:hover,h5:hover>a.anchor,h5>a.anchor:hover,h6:hover>a.anchor,h6>a.anchor:hover{visibility:visible}
+#content h1>a.link,h2>a.link,h3>a.link,#toctitle>a.link,.sidebarblock>.content>.title>a.link,h4>a.link,h5>a.link,h6>a.link{color:#ba3925;text-decoration:none}
+#content h1>a.link:hover,h2>a.link:hover,h3>a.link:hover,#toctitle>a.link:hover,.sidebarblock>.content>.title>a.link:hover,h4>a.link:hover,h5>a.link:hover,h6>a.link:hover{color:#a53221}
+details,.audioblock,.imageblock,.literalblock,.listingblock,.stemblock,.videoblock{margin-bottom:1.25em}
+details>summary:first-of-type{cursor:pointer;display:list-item;outline:none;margin-bottom:.75em}
+.admonitionblock td.content>.title,.audioblock>.title,.exampleblock>.title,.imageblock>.title,.listingblock>.title,.literalblock>.title,.stemblock>.title,.openblock>.title,.paragraph>.title,.quoteblock>.title,table.tableblock>.title,.verseblock>.title,.videoblock>.title,.dlist>.title,.olist>.title,.ulist>.title,.qlist>.title,.hdlist>.title{text-rendering:optimizeLegibility;text-align:left;font-family:"Noto Serif","DejaVu Serif",serif;font-size:1rem;font-style:italic}
+table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
+.paragraph.lead>p,#preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:1.21875em;line-height:1.6;color:rgba(0,0,0,.85)}
+table.tableblock #preamble>.sectionbody>[class="paragraph"]:first-of-type p{font-size:inherit}
+.admonitionblock>table{border-collapse:separate;border:0;background:none;width:100%}
+.admonitionblock>table td.icon{text-align:center;width:80px}
+.admonitionblock>table td.icon img{max-width:none}
+.admonitionblock>table td.icon .title{font-weight:bold;font-family:"Open Sans","DejaVu Sans",sans-serif;text-transform:uppercase}
+.admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6)}
+.admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content{border-style:solid;border-width:1px;border-color:#e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;-webkit-border-radius:4px;border-radius:4px}
+.exampleblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child{margin-bottom:0}
+.sidebarblock{border-style:solid;border-width:1px;border-color:#dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;-webkit-border-radius:4px;border-radius:4px}
+.sidebarblock>:first-child{margin-top:0}
+.sidebarblock>:last-child{margin-bottom:0}
+.sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
+.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.literalblock pre,.listingblock>.content>pre{-webkit-border-radius:4px;border-radius:4px;word-wrap:break-word;overflow-x:auto;padding:1em;font-size:.8125em}
+@media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
+@media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
+.literalblock pre,.listingblock>.content>pre:not(.highlight),.listingblock>.content>pre[class="highlight"],.listingblock>.content>pre[class^="highlight "]{background:#f7f7f8}
+.literalblock.output pre{color:#f7f7f8;background:rgba(0,0,0,.9)}
+.listingblock>.content{position:relative}
+.listingblock code[data-lang]::before{display:none;content:attr(data-lang);position:absolute;font-size:.75em;top:.425rem;right:.5rem;line-height:1;text-transform:uppercase;color:inherit;opacity:.5}
+.listingblock:hover code[data-lang]::before{display:block}
+.listingblock.terminal pre .command::before{content:attr(data-prompt);padding-right:.5em;color:inherit;opacity:.5}
+.listingblock.terminal pre .command:not([data-prompt])::before{content:"$"}
+.listingblock pre.highlightjs{padding:0}
+.listingblock pre.highlightjs>code{padding:1em;-webkit-border-radius:4px;border-radius:4px}
+.listingblock pre.prettyprint{border-width:0}
+.prettyprint{background:#f7f7f8}
+pre.prettyprint .linenums{line-height:1.45;margin-left:2em}
+pre.prettyprint li{background:none;list-style-type:inherit;padding-left:0}
+pre.prettyprint li code[data-lang]::before{opacity:1}
+pre.prettyprint li:not(:first-child) code[data-lang]::before{display:none}
+table.linenotable{border-collapse:separate;border:0;margin-bottom:0;background:none}
+table.linenotable td[class]{color:inherit;vertical-align:top;padding:0;line-height:inherit;white-space:normal}
+table.linenotable td.code{padding-left:.75em}
+table.linenotable td.linenos{border-right:1px solid currentColor;opacity:.35;padding-right:.5em}
+pre.pygments .lineno{border-right:1px solid currentColor;opacity:.35;display:inline-block;margin-right:.75em}
+pre.pygments .lineno::before{content:"";margin-right:-.125em}
+.quoteblock{margin:0 1em 1.25em 1.5em;display:table}
+.quoteblock:not(.excerpt)>.title{margin-left:-1.5em;margin-bottom:.75em}
+.quoteblock blockquote,.quoteblock p{color:rgba(0,0,0,.85);font-size:1.15rem;line-height:1.75;word-spacing:.1em;letter-spacing:0;font-style:italic;text-align:justify}
+.quoteblock blockquote{margin:0;padding:0;border:0}
+.quoteblock blockquote::before{content:"\201c";float:left;font-size:2.75em;font-weight:bold;line-height:.6em;margin-left:-.6em;color:#7a2518;text-shadow:0 1px 2px rgba(0,0,0,.1)}
+.quoteblock blockquote>.paragraph:last-child p{margin-bottom:0}
+.quoteblock .attribution{margin-top:.75em;margin-right:.5ex;text-align:right}
+.verseblock{margin:0 1em 1.25em}
+.verseblock pre{font-family:"Open Sans","DejaVu Sans",sans;font-size:1.15rem;color:rgba(0,0,0,.85);font-weight:300;text-rendering:optimizeLegibility}
+.verseblock pre strong{font-weight:400}
+.verseblock .attribution{margin-top:1.25rem;margin-left:.5ex}
+.quoteblock .attribution,.verseblock .attribution{font-size:.9375em;line-height:1.45;font-style:italic}
+.quoteblock .attribution br,.verseblock .attribution br{display:none}
+.quoteblock .attribution cite,.verseblock .attribution cite{display:block;letter-spacing:-.025em;color:rgba(0,0,0,.6)}
+.quoteblock.abstract blockquote::before,.quoteblock.excerpt blockquote::before,.quoteblock .quoteblock blockquote::before{display:none}
+.quoteblock.abstract blockquote,.quoteblock.abstract p,.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{line-height:1.6;word-spacing:0}
+.quoteblock.abstract{margin:0 1em 1.25em;display:block}
+.quoteblock.abstract>.title{margin:0 0 .375em;font-size:1.15em;text-align:center}
+.quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
+.quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
+.quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+table.tableblock{max-width:100%;border-collapse:separate}
+p.tableblock:last-child{margin-bottom:0}
+td.tableblock>.content>:last-child{margin-bottom:-1.25em}
+td.tableblock>.content>:last-child.sidebarblock{margin-bottom:0}
+table.tableblock,th.tableblock,td.tableblock{border:0 solid #dedede}
+table.grid-all>thead>tr>.tableblock,table.grid-all>tbody>tr>.tableblock{border-width:0 1px 1px 0}
+table.grid-all>tfoot>tr>.tableblock{border-width:1px 1px 0 0}
+table.grid-cols>*>tr>.tableblock{border-width:0 1px 0 0}
+table.grid-rows>thead>tr>.tableblock,table.grid-rows>tbody>tr>.tableblock{border-width:0 0 1px}
+table.grid-rows>tfoot>tr>.tableblock{border-width:1px 0 0}
+table.grid-all>*>tr>.tableblock:last-child,table.grid-cols>*>tr>.tableblock:last-child{border-right-width:0}
+table.grid-all>tbody>tr:last-child>.tableblock,table.grid-all>thead:last-child>tr>.tableblock,table.grid-rows>tbody>tr:last-child>.tableblock,table.grid-rows>thead:last-child>tr>.tableblock{border-bottom-width:0}
+table.frame-all{border-width:1px}
+table.frame-sides{border-width:0 1px}
+table.frame-topbot,table.frame-ends{border-width:1px 0}
+table.stripes-all tr,table.stripes-odd tr:nth-of-type(odd),table.stripes-even tr:nth-of-type(even),table.stripes-hover tr:hover{background:#f8f8f7}
+th.halign-left,td.halign-left{text-align:left}
+th.halign-right,td.halign-right{text-align:right}
+th.halign-center,td.halign-center{text-align:center}
+th.valign-top,td.valign-top{vertical-align:top}
+th.valign-bottom,td.valign-bottom{vertical-align:bottom}
+th.valign-middle,td.valign-middle{vertical-align:middle}
+table thead th,table tfoot th{font-weight:bold}
+tbody tr th{display:table-cell;line-height:1.6;background:#f7f8f7}
+tbody tr th,tbody tr th p,tfoot tr th,tfoot tr th p{color:rgba(0,0,0,.8);font-weight:bold}
+p.tableblock>code:only-child{background:none;padding:0}
+p.tableblock{font-size:1em}
+ol{margin-left:1.75em}
+ul li ol{margin-left:1.5em}
+dl dd{margin-left:1.125em}
+dl dd:last-child,dl dd:last-child>:last-child{margin-bottom:0}
+ol>li p,ul>li p,ul dd,ol dd,.olist .olist,.ulist .ulist,.ulist .olist,.olist .ulist{margin-bottom:.625em}
+ul.checklist,ul.none,ol.none,ul.no-bullet,ol.no-bullet,ol.unnumbered,ul.unstyled,ol.unstyled{list-style-type:none}
+ul.no-bullet,ol.no-bullet,ol.unnumbered{margin-left:.625em}
+ul.unstyled,ol.unstyled{margin-left:0}
+ul.checklist{margin-left:.625em}
+ul.checklist li>p:first-child>.fa-square-o:first-child,ul.checklist li>p:first-child>.fa-check-square-o:first-child{width:1.25em;font-size:.8em;position:relative;bottom:.125em}
+ul.checklist li>p:first-child>input[type="checkbox"]:first-child{margin-right:.25em}
+ul.inline{display:-ms-flexbox;display:-webkit-box;display:flex;-ms-flex-flow:row wrap;-webkit-flex-flow:row wrap;flex-flow:row wrap;list-style:none;margin:0 0 .625em -1.25em}
+ul.inline>li{margin-left:1.25em}
+.unstyled dl dt{font-weight:400;font-style:normal}
+ol.arabic{list-style-type:decimal}
+ol.decimal{list-style-type:decimal-leading-zero}
+ol.loweralpha{list-style-type:lower-alpha}
+ol.upperalpha{list-style-type:upper-alpha}
+ol.lowerroman{list-style-type:lower-roman}
+ol.upperroman{list-style-type:upper-roman}
+ol.lowergreek{list-style-type:lower-greek}
+.hdlist>table,.colist>table{border:0;background:none}
+.hdlist>table>tbody>tr,.colist>table>tbody>tr{background:none}
+td.hdlist1,td.hdlist2{vertical-align:top;padding:0 .625em}
+td.hdlist1{font-weight:bold;padding-bottom:1.25em}
+.literalblock+.colist,.listingblock+.colist{margin-top:-.5em}
+.colist td:not([class]):first-child{padding:.4em .75em 0;line-height:1;vertical-align:top}
+.colist td:not([class]):first-child img{max-width:none}
+.colist td:not([class]):last-child{padding:.25em 0}
+.thumb,.th{line-height:0;display:inline-block;border:solid 4px #fff;-webkit-box-shadow:0 0 0 1px #ddd;box-shadow:0 0 0 1px #ddd}
+.imageblock.left{margin:.25em .625em 1.25em 0}
+.imageblock.right{margin:.25em 0 1.25em .625em}
+.imageblock>.title{margin-bottom:0}
+.imageblock.thumb,.imageblock.th{border-width:6px}
+.imageblock.thumb>.title,.imageblock.th>.title{padding:0 .125em}
+.image.left,.image.right{margin-top:.25em;margin-bottom:.25em;display:inline-block;line-height:0}
+.image.left{margin-right:.625em}
+.image.right{margin-left:.625em}
+a.image{text-decoration:none;display:inline-block}
+a.image object{pointer-events:none}
+sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
+sup.footnote a,sup.footnoteref a{text-decoration:none}
+sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+#footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
+#footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
+#footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
+#footnotes .footnote a:first-of-type{font-weight:bold;text-decoration:none;margin-left:-1.05em}
+#footnotes .footnote:last-of-type{margin-bottom:0}
+#content #footnotes{margin-top:-.625em;margin-bottom:0;padding:.75em 0}
+.gist .file-data>table{border:0;background:#fff;width:100%;margin-bottom:0}
+.gist .file-data>table td.line-data{width:99%}
+div.unbreakable{page-break-inside:avoid}
+.big{font-size:larger}
+.small{font-size:smaller}
+.underline{text-decoration:underline}
+.overline{text-decoration:overline}
+.line-through{text-decoration:line-through}
+.aqua{color:#00bfbf}
+.aqua-background{background:#00fafa}
+.black{color:#000}
+.black-background{background:#000}
+.blue{color:#0000bf}
+.blue-background{background:#0000fa}
+.fuchsia{color:#bf00bf}
+.fuchsia-background{background:#fa00fa}
+.gray{color:#606060}
+.gray-background{background:#7d7d7d}
+.green{color:#006000}
+.green-background{background:#007d00}
+.lime{color:#00bf00}
+.lime-background{background:#00fa00}
+.maroon{color:#600000}
+.maroon-background{background:#7d0000}
+.navy{color:#000060}
+.navy-background{background:#00007d}
+.olive{color:#606000}
+.olive-background{background:#7d7d00}
+.purple{color:#600060}
+.purple-background{background:#7d007d}
+.red{color:#bf0000}
+.red-background{background:#fa0000}
+.silver{color:#909090}
+.silver-background{background:#bcbcbc}
+.teal{color:#006060}
+.teal-background{background:#007d7d}
+.white{color:#bfbfbf}
+.white-background{background:#fafafa}
+.yellow{color:#bfbf00}
+.yellow-background{background:#fafa00}
+span.icon>.fa{cursor:default}
+a span.icon>.fa{cursor:inherit}
+.admonitionblock td.icon [class^="fa icon-"]{font-size:2.5em;text-shadow:1px 1px 2px rgba(0,0,0,.5);cursor:default}
+.admonitionblock td.icon .icon-note::before{content:"\f05a";color:#19407c}
+.admonitionblock td.icon .icon-tip::before{content:"\f0eb";text-shadow:1px 1px 2px rgba(155,155,0,.8);color:#111}
+.admonitionblock td.icon .icon-warning::before{content:"\f071";color:#bf6900}
+.admonitionblock td.icon .icon-caution::before{content:"\f06d";color:#bf3400}
+.admonitionblock td.icon .icon-important::before{content:"\f06a";color:#bf0000}
+.conum[data-value]{display:inline-block;color:#fff!important;background:rgba(0,0,0,.8);-webkit-border-radius:100px;border-radius:100px;text-align:center;font-size:.75em;width:1.67em;height:1.67em;line-height:1.67em;font-family:"Open Sans","DejaVu Sans",sans-serif;font-style:normal;font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
+h1,h2,p,td.content,span.alt{letter-spacing:-.01em}
+p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
+p,blockquote,dt,td.content,span.alt{font-size:1.0625rem}
+p{margin-bottom:1.25rem}
+.sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
+.exampleblock>.content{background:#fffef7;border-color:#e0e0dc;-webkit-box-shadow:0 1px 4px #e0e0dc;box-shadow:0 1px 4px #e0e0dc}
+.print-only{display:none!important}
+@page{margin:1.25cm .75cm}
+@media print{*{-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}
+html{font-size:80%}
+a{color:inherit!important;text-decoration:underline!important}
+a.bare,a[href^="#"],a[href^="mailto:"]{text-decoration:none!important}
+a[href^="http:"]:not(.bare)::after,a[href^="https:"]:not(.bare)::after{content:"(" attr(href) ")";display:inline-block;font-size:.875em;padding-left:.25em}
+abbr[title]::after{content:" (" attr(title) ")"}
+pre,blockquote,tr,img,object,svg{page-break-inside:avoid}
+thead{display:table-header-group}
+svg{max-width:100%}
+p,blockquote,dt,td.content{font-size:1em;orphans:3;widows:3}
+h2,h3,#toctitle,.sidebarblock>.content>.title{page-break-after:avoid}
+#toc,.sidebarblock,.exampleblock>.content{background:none!important}
+#toc{border-bottom:1px solid #dddddf!important;padding-bottom:0!important}
+body.book #header{text-align:center}
+body.book #header>h1:first-child{border:0!important;margin:2.5em 0 1em}
+body.book #header .details{border:0!important;display:block;padding:0!important}
+body.book #header .details span:first-child{margin-left:0!important}
+body.book #header .details br{display:block}
+body.book #header .details br+span::before{content:none!important}
+body.book #toc{border:0!important;text-align:left!important;padding:0!important;margin:0!important}
+body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-break-before:always}
+.listingblock code[data-lang]::before{display:block}
+#footer{padding:0 .9375em}
+.hide-on-print{display:none!important}
+.print-only{display:block!important}
+.hide-for-print{display:none!important}
+.show-for-print{display:inherit!important}}
+@media print,amzn-kf8{#header>h1:first-child{margin-top:1.25rem}
+.sect1{padding:0!important}
+.sect1+.sect1{border:0}
+#footer{background:none}
+#footer-text{color:rgba(0,0,0,.6);font-size:.9em}}
+@media amzn-kf8{#header,#content,#footnotes,#footer{padding:0}}
+</style>
+</head>
+<body class="article">
+<div id="header">
+</div>
+<div id="content">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">[[_heading=h.2p2csry]]<span class="image"><img src="figures/image1.png" alt="image" width="164" height="144"></span></th>
+<th class="tableblock halign-left valign-top">OceanGliders 1.0
+
+Harmonizing format across OceanGliders
+
+Terms of References</th>
+</tr>
+</thead>
+</table>
+<div class="paragraph">
+<p>[[_heading=h.gjdgxs]]<em>Drafted: Victor Turpin – 13/12/2019</em></p>
+</div>
+<div class="paragraph">
+<p><em>Edited: Daniel Hayes -18/12/2019</em></p>
+</div>
+<div class="paragraph">
+<p><em>Reviewed: data format harmonization working group – 07/05/2020</em></p>
+</div>
+<div class="paragraph">
+<p><em>Reviewed: Victor Turpin – 17/11/2020</em></p>
+</div>
+<div class="paragraph">
+<p><em>Edited: Justin Buck/Emma Slater – 26/11/2020</em></p>
+</div>
+<div class="paragraph">
+<p><em>Edited: Thierry Carval – 17/03/2021</em></p>
+</div>
+<div class="paragraph">
+<p>_Finalized and proposed: data format harmonization group – _</p>
+</div>
+<div class="paragraph">
+<p><em>Endorsed: OceanGliders Steering Team –</em></p>
+</div>
+<div class="paragraph">
+<p><strong>Table of Contents</strong></p>
+</div>
+<div class="paragraph">
+<p>[[_heading=h.1fob9te]]<em>This document has been endorsed by the OceanGliders steering team, the OceanGliders data management task team, and the following OceanGliders Data Assembly Centers: </em></p>
+</div>
+<div class="paragraph">
+<p>_IOOS/glider DAC (USA), _</p>
+</div>
+<div class="paragraph">
+<p>_Coriolis (France), _</p>
+</div>
+<div class="paragraph">
+<p>_BODC (UK), _</p>
+</div>
+<div class="paragraph">
+<p><em>IMOS/AODN (Australia),</em></p>
+</div>
+<div class="paragraph">
+<p>_SOCIB (Spain), _</p>
+</div>
+<div class="paragraph">
+<p>_C-IOOS (Canada), _</p>
+</div>
+<div class="paragraph">
+<p><em>EMODNET Physics (EU),</em></p>
+</div>
+<div class="sect1">
+<h2 id="_background">Background</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The OceanGliders program brings together marine scientists and glider operators from all over the world who observe the long-term physical, biogeochemical, biological ocean processes, and phenomena relevant for societal applications. It allows active coordination and strengthening the roles of gliders in the ocean observation programs worldwide and contributes to the present international efforts for ocean observation for climate, ocean health and real-time services.</p>
+</div>
+<div class="paragraph">
+<p>The program oversees the monitoring of global glider activity, a prerequisite for active coordination. By sharing requirements, efforts and scientific knowledge needed for glider data collection OceanGliders aims to continuously develop the network by supporting the dissemination of glider data in global databases, in real-time and delayed mode, for a wider community.</p>
+</div>
+<div class="paragraph">
+<p>The OceanGliders program was created about 10 years after the popularization of the use of gliders by ocean scientists. With no common rules on format, data managers from Australia, the USA, and Europe processed 3 regional formats that are not interoperable.</p>
+</div>
+<div class="paragraph">
+<p>Harmonization toward interoperability within the 3 current formats and other networks is a recommendation from the OceanGliders steering team to strengthen the network and reach the FAIR principles (Findable, Accessible, Interoperable, Reusable) adopted by GOOS (Global Ocean Observing System), and better monitor the program activity.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_objectives">Objectives</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This document defines the requirements of the future OceanGliders harmonized format, hereafter OG1.0, and the agenda for achievements.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_og1_0_general_conventions">OG1.0 General conventions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>The required granularity of the data set is the glider mission, starting from deployment at sea to recovery.</p>
+</li>
+<li>
+<p>Data are recorded as a trajectory Discrete Geometry, using NetCDF<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> system and following CF 1.8<sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> (Climate and Forecast) specifications. Each data file contains a series of dive cycles representing the mission of the glider. It can be produced in near real time after every glider transmission and revised later into a recovery-mode (when glider on shore and any data gaps filled in) or a delayed-mode (after rigorous QC) version.</p>
+</li>
+<li>
+<p>Format follows the ACDD 1.3 convention.</p>
+</li>
+<li>
+<p>Variables are identified in capital letters.</p>
+</li>
+<li>
+<p>Attributes are identified in lower case.</p>
+</li>
+<li>
+<p>Vocabulary collections will be hosted in different places (NERC Vocabulary Server -NVS, OceanOPS, ICES, etc). The OceanGliders data management team will manage (additions, updates, etc.) the collections.</p>
+</li>
+<li>
+<p>OG1.0 overseen the following parameters: CTD measurements, Oxygen measurements, Optical fluorescence, and backscatter measurements. Other types of measurements (intermediate parameters, technical measurements, and other variables) not framed by OG1.0 could be included in OG1.0 data files. No control will be applied to those measurements.</p>
+</li>
+<li>
+<p>GPS variables and along-track positioning variables are mandatory.</p>
+</li>
+<li>
+<p>Interpolation methodologies used to compute along-track positioning variables, phases and QC needs publishing as a best practice document under strict rules.</p>
+</li>
+<li>
+<p>A list of mandatory metadata describing the data set is defined below.</p>
+</li>
+<li>
+<p>It is highly encouraged to use a unique resource identifier (uri) to increase machine-to-machine communications.</p>
+</li>
+<li>
+<p>3 recommendations level have been defined for attributes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Mandatory: Minimum metadata set to be compliant with OG1.0 requirement.</p>
+</li>
+<li>
+<p>Highly desirable: Worth having for complete use of the data set.</p>
+</li>
+<li>
+<p>Suggested: If the information is available.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_doi_management">DOI management</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>DOI can be minted at any level (PI, Reference Data Center, Data Assembly Center, Global Data Assembly Center) following the internal policy of data curation.</p>
+</li>
+<li>
+<p>DOI can be minted for a single glider mission or multiple glider missions (i.e. project, reference lines).</p>
+</li>
+<li>
+<p>DOI if included in OG files needs to be preserved. The DOI must remain unchanged if there is no valuable modification. If valuable information is aggregated/added or a new product produced, a new DOI shall be created and the new DOI MUST link to the original DOI to acknowledge as the source</p>
+</li>
+<li>
+<p>GDACs will create an evolving global data set with a DOI referring to all existing DOIs.</p>
+</li>
+<li>
+<p>The most effective way of preserving the integrity of the source citation is to preserve the intitial DOI added in the OG file.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_og1_0_file_naming_convention">OG1.0 file naming convention</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Data files should be named as follows:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"file_name" : "&lt;id&gt;.nc" (ex : "sp065_20210616T1430_R.nc")</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Recalling that:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>"id" : "&lt;trajectory&gt;_&lt;data_mode&gt;" (ex : "sp065_20210616T1430_R")</p>
+</li>
+<li>
+<p>"trajectory" : "&lt;platform_code&gt;_&lt;start_date&gt;" (ex :  "sp065_20210616T1430")</p>
+</li>
+<li>
+<p>"platform_code", "start_date", "data_mode" are as described below in this document.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_global_attributes">Global attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The global attribute section is used for data discovery. The following global attributes should appear in the global section. The NetCDF Climate and Forecast (CF) Metadata Conventions are available from: <a href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.7/cf-conventions.html#trajectory-data"><em>http://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#trajectory-data</em></a></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Global attribute</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Definition</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Requirement status</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Format or fixed value</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">title</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A short phrase or sentence describing the dataset.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“OceanGliders trajectory file”</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">platform</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Name of the platform(s) that supported the sensors data used to create this data set or product.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://vocab.nerc.ac.uk/collection/L06/current/"><em>https://vocab.nerc.ac.uk/collection/L06/current/</em></a></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">“Autonomous Underwater Vehicle”</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">platform_vocabulary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controlled vocabulary for the names used in the "platform" attribute.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://vocab.nerc.ac.uk/collection/L06/current/27/"><em>https://vocab.nerc.ac.uk/collection/L06/current/27/</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">id</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Formatted mission name: &lt;platform_code&gt;_&lt;start_date&gt;_&lt;data_mode&gt;</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em><em></em><em></em></em><em><em></em><em></em></em><em><em></em><em></em></em><em><em></em><em></em></em>_
+Example: sverdrup_20200512T001245_delayed</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p><em><em></em><em></em></em><em><em></em><em></em></em><em><em></em><em></em></em><em><em></em>__</em>
+Example: SL287_20180715T012451_delayed</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p><em><em></em><em></em></em><em><em></em><em></em></em><em><em></em><em></em></em>_
+Example: p202_20150923T150451_R</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+
+</blockquote>
+</div>
+</blockquote>
+</div>
+</blockquote>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">naming_authority</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>A unique name that identifies the institution who provided the id.
+ACDD-1.3 recommends using reverse-DNS naming.</p>
+</div>
+<div class="paragraph">
+<p>Examples:
+* IOOS
+* IMOS
+* Coriolis
+* edu.ucsd.spray</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">institution</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The name of the institution where the original data was produced.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em><em></em><em></em></em><em><em></em><em></em></em><em><em></em>___</em>
+Example: Texas A-M University</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p><em><em></em><em></em></em><em>_</em>
+Example: IMOS</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p><em><em></em><em></em></em><em>_</em>
+Example: PLOCAN</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+
+</blockquote>
+</div>
+</blockquote>
+</div>
+</blockquote>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">internal_mission_identifier</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>The mission identifier used by the institution principally responsible for originating this data</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em><em></em><em></em></em><em><em></em><em></em></em><em><em></em><em></em></em><em>__</em>
+Example: sverdrup_20200512_delayed</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p><em><em></em><em></em></em><em><em></em><em></em></em><em>__</em>
+Example: Forster20201109</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="ulist">
+<ul>
+<li>
+<p><em><em></em><em></em></em><em><em></em>___</em>
+Example: Estoc_2015</p>
+</li>
+</ul>
+</div>
+<div class="quoteblock">
+<blockquote>
+
+</blockquote>
+</div>
+</blockquote>
+</div>
+</blockquote>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">geospatial_lat_min</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes a simple lower latitude limit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">decimal degree</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">geospatial_lat_max</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes a simple upper latitude limit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">decimal degree</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">geospatial_lon_min</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes a simple longitude limit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">decimal degree</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">geospatial_lon_max</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes a simple longitude limit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">decimal degree</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">geospatial_vertical_min</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes the numerically smaller vertical limit.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">meter depth</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">geospatial_ vertical_max</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Describes the numerically larger vertical limit</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">meter depth</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">time_coverage_start</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iso 8601</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">time_coverage_end</p></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iso 8601</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the regular sample line or area.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">site_vocabulary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controlled vocabulary of the names used in the “site” attribute</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">To be defined</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">program</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The overarching program(s) of which the dataset is a part. A program consists of a set (or portfolio) of related and possibly interdependent projects that meet an overarching objective.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Highly desirable</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">project</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The name of the project(s) principally responsible for originating this data. Multiple projects can be separated by commas</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">network</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A network is a group of platforms crossing the boundaries of a single program. It can represent a mutual scientific objective, a geographical focus, an array and/or a project. Multiple networks shall be separated by commas.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contributor_name</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of the contributors to the glider mission. Multiple contributors are separated by commas.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PI name is mandatory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contributor_email</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Email if the contributors to the glider mission. Multiple contributors’ emails are separated by commas.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PI email is mandatory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contributor_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Unique id of the contributors to the glider mission. Multiple contributors’ ids are separated by commas.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contributor_role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Role of the contributors to the glider mission. Multiple contributors’ roles are separated by commas.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PI vocabulary is mandatory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contributor_role_vocabulary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Controlled vocabulary for the roles used in the "contributors_role". Multiple contributors’ roles and vocabularies are separated by commas.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PI vocabulary is mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://orcid.org/"><em>https://orcid.org/</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">agency</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Name of agencies involved in the glider mission. Multiple agencies are separated by commas.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">operating agency is mandatory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">agency_role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Role of the agencies involved in the glider mission. Multiple agencies’ roles are separated by a comma.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">operating agency role is mandatory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">agency_role_vocabulary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The controlled vocabulary of the role used in the agency’s role. Multiple vocabularies are separated by commas.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">operating agency vocabulary is mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://vocab.nerc.ac.uk/collection/C86/current/"><em>https://vocab.nerc.ac.uk/collection/C86/current/</em></a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">agency_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">code of the agency involved in the glider mission. Multiple ids are separated by a comma.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">agency_id_vocabulary</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">url to the repository of the id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EMDO, ROR, etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">uri</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Other universal resource identifiers relevant to be linked to this dataset. Multiple uris are separated by a comma.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">EDIOS, CSR, EDMERP, EDMED, CDI, ICES, etc.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data_url</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">url link to OG1.0 data file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">doi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The digital object identifier of the OG1.0 data file</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rtqc_method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The method used by DAC to apply real-time quality control to the data set</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rtqc_method_doi</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">The digital object identifier of the methodology used to apply real-time quality control to the data set.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">web_link</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">url that provides useful information about anything related to the glider mission. Multiple urls are separated by commas.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">comment</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Miscellaneous information about the data or methods used to produce it.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date_created</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">date of creation of this data set</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">iso 8601</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">featureType</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Description of a single feature with this discrete sampling geometry</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">trajectory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Conventions</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">A comma-separated list of the conventions that are followed by the dataset. For files that follow this version of ACDD, include the string 'ACDD-1.3'</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">CF-1.8, ACDD-1.3, OG-1.0</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Note about program, networks, and sites:
+Some examples are provided in <a href="#ProgramNetworkSite-example">Examples using program, network, and site</a>.
+The image below describes the architecture of the GOOS/OceanOPS database.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="figures/image2.png" alt="image" width="515" height="171"></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_dimension_and_definition">Dimension and definition</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Name</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Definition</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Comment</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N_MEASUREMENTS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N_MEASUREMENTS = unlimited;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of recorded locations.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N_PARAM</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N_PARAM = &lt;int value&gt;;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of parameters measured or calculated for a pressure sample. Examples :(pressure, temperature) : N_PARAM = 2 (pressure, temperature, salinity) : N_PARAM = 3 (pressure, temperature, conductivity, salinity) : N_PARAM = 4</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N_SENSOR</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N_SENSOR = &lt;int value&gt;;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Number of sensors mounted on the platform and used to measure the parameters.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_location_variables">Location variables</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_gps_variables">GPS variables</h3>
+<div class="paragraph">
+<p>OG1.0 requirements cover the GPS variables delivered by the glider when at the sea surface.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>OG1.0 requirement for GPS variables: The table below describes mandatory GPS variables and their attributes.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLE NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LATITUDE_GPS</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>double LATITUDE_GPS(N_MEASUREMENTS)</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE_GPS:long_name = “latitude of each GPS location”;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE_GPS:standard_name = “latitude”;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE_GPS:units = “degrees_north”;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE_GPS:FillValue = -9999.9;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE_GPS:valid_min = -90.0;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE_GPS:valid_max = 90.0;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE_GPS:ancillary_variables = "LATITUDE_GPS_QC"</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LONGITUDE_GPS</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>double LONGITUDE_GPS(N_MEASUREMENTS)</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE_GPS:long_name = “longitude of each GPS location”;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE_GPS:standard_name = “longitude”;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE_GPS:units = “degrees_east”;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE_GPS:FillValue = -9999.9;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE_GPS:valid_min = -180.0;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE_GPS:valid_max = 180.0;</p>
+</div>
+<div class="paragraph">
+<p>LONGIITUDE_GPS:ancillary_variables = "LONGITUDE_GPS_QC"</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TIME_GPS</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>double TIME_GPS(N_MEASUREMENTS)</p>
+</div>
+<div class="paragraph">
+<p>TIME_GPS:long_name = “time of each GPS location”;</p>
+</div>
+<div class="paragraph">
+<p>TIME_GPS:calendar = "gregorian" ;</p>
+</div>
+<div class="paragraph">
+<p>TIME_GPS:units = “seconds since 1970-01-01T00:00:00Z”;</p>
+</div>
+<div class="paragraph">
+<p>TIME_GPS:valid_min = 1e9 ;</p>
+</div>
+<div class="paragraph">
+<p>TIME_GPS:valid_max = 4e9 ;</p>
+</div>
+<div class="paragraph">
+<p>TIME_GPS:FillValue = -1.0 ;</p>
+</div>
+<div class="paragraph">
+<p>TIME_GPS:ancillary_variables = “TIME_GPS_QC”</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_along_track_positioning_variables">Along track positioning variables</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>OG1.0 requirements cover positioning variables and geolocating any scientific measurements made by the glider during its mission.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>OG1.0 requirement for positioning variable: The table below describes the mandatory positioning variables and their attributes.</p>
+</li>
+</ul>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLE NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LATITUDE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>double LATITUDE (N_MEASUREMENTS)</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE:long_name = “latitude of each measurements and GPS location”;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE:standard_name = “latitude”;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE:units = “degrees_north”;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE:FillValue = -9999.9;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE:valid_min = -90.0;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE:valid_max = 90.0;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE:interpolation_methodology = “”;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE:interpolation_methodology_vocabulary = “”;</p>
+</div>
+<div class="paragraph">
+<p>LATITUDE:interpolation_methodology_doi = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LONGITUDE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>double LONGITUDE (N_MEASUREMENTS)</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE:long_name = “longitude of each measurements and GPS location”;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE:standard_name = “longitude”;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE:units = “degrees_east”;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE:FillValue = -9999.9;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE:valid_min = -180.0;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE:valid_max = 180.0;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE:interpolation_methodology = “”;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE:interpolation_methodology_vocabulary = “”;</p>
+</div>
+<div class="paragraph">
+<p>LONGITUDE:interpolation_methodology_doi = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TIME</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>double TIME (N_MEASUREMENTS)</p>
+</div>
+<div class="paragraph">
+<p>TIME:long_name = “time of measurement and gps location”;</p>
+</div>
+<div class="paragraph">
+<p>TIME:standard_name = “time”;</p>
+</div>
+<div class="paragraph">
+<p>TIME:calendar = "gregorian" ;</p>
+</div>
+<div class="paragraph">
+<p>TIME:units = “seconds since 1970-01-01T00:00:00Z”;</p>
+</div>
+<div class="paragraph">
+<p>TIME:FillValue = -1.0 ;</p>
+</div>
+<div class="paragraph">
+<p>TIME:interpolation_methodology = “”;</p>
+</div>
+<div class="paragraph">
+<p>TIME:interpolation_methodology_vocabulary = “”;</p>
+</div>
+<div class="paragraph">
+<p>TIME:interpolation_methodology_doi = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Interpolation methodologies need publishing as a best practice document separately to the OG1.0 terms of reference.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_general_information">General Information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this following section, two options, “encapsulate variable” and “individual variable” are proposed to store the general information.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_trajectory_name">Trajectory Name</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLE NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TRAJECTORY</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string TRAJECTORY</p>
+</div>
+<div class="paragraph">
+<p>TRAJECTORY:cf_role = "trajectory_id"</p>
+</div>
+<div class="paragraph">
+<p>TRAJECTORY:long_name = “trajectory name”;</p>
+</div>
+<div class="paragraph">
+<p>TRAJECTORY:data_mode_vocabulary = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>mandatory</p>
+</div>
+<div class="paragraph">
+<p>Value: &lt;platform_code&gt;_&lt;start_date&gt;</p>
+</div>
+<div class="paragraph">
+<p>Where &lt;platform_code&gt; refers to the name of the glider, &lt;start_date&gt; refers to the deployment start UTC date under iso 8601,</p>
+</div>
+<div class="paragraph">
+<p>Ex : eltanin_20210909T1605</p>
+</div>
+<div class="paragraph">
+<p>If the glider has no &lt;platform_code&gt; use &lt;platform_serial_number&gt; instead to create the TRAJECTORY</p>
+</div>
+<div class="paragraph">
+<p>Ex.: sp042_20210218T2325</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="_platform_information">Platform information</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLE NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLATFORM_TYPE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string PLATFORM_TYPE</p>
+</div>
+<div class="paragraph">
+<p>PLATFORM_TYPE:long_name: “type of glider”;</p>
+</div>
+<div class="paragraph">
+<p>PLATFORM_TYPE:platform_type_vocabulary = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLATFORM_MODEL</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string PLATFORM_MODEL</p>
+</div>
+<div class="paragraph">
+<p>PLATFORM_MODEL:long_name: “model of the glider”;</p>
+</div>
+<div class="paragraph">
+<p>PLATFORM_MODEL:platform_model_vocabulary = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">WMO_IDENTIFIER</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string WMO_IDENTIFIER</p>
+</div>
+<div class="paragraph">
+<p>WMO_IDENTIFIER:long_name = “wmo id”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLATFORM_SERIAL_NUMBER</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string PLATFORM_SERIAL_NUMBER</p>
+</div>
+<div class="paragraph">
+<p>PLATFORM_SERIAL_NUMBER:long_name = “glider serial number”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLATFORM_CODE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string PLATFORM_CODE</p>
+</div>
+<div class="paragraph">
+<p>PLATFORM_CODE:long_name = “nickname of the glider”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLATFORM_DEPTH_RATING</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>integer PLATFORM_DEPTH_RATING</p>
+</div>
+<div class="paragraph">
+<p>PLATFORM_DEPTH_RATING:long_name = “depth limit in meters of the glider for this mission”;</p>
+</div>
+<div class="paragraph">
+<p>PLATFORM_DEPTH_RATING:convention = “positive value expected - e.g. 100m depth = 100”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ICES_CODE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string ICES_CODE</p>
+</div>
+<div class="paragraph">
+<p>ICES_CODE:long_name = “ICES code” ;</p>
+</div>
+<div class="paragraph">
+<p>ICES_CODE :ices_code_vocabulary = “” ;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PLATFORM_MAKER</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string PLATFORM_MAKER</p>
+</div>
+<div class="paragraph">
+<p>PLATFORM_MAKER:long_name = “glider manufacturer”;</p>
+</div>
+<div class="paragraph">
+<p>PLATFORM_MAKER:platform_maker_vocabulary = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_deployment_information">Deployment information</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLE NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEPLOYMENT_TIME</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>double DEPLOYMENT_TIME</p>
+</div>
+<div class="paragraph">
+<p>long_name = “date of deployment”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEPLOYMENT_LATITUDE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string DEPLOYMENT_LATITUDE</p>
+</div>
+<div class="paragraph">
+<p>DEPLOYMENT_LATITUDE:long_name = “latitude of deployment”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">DEPLOYMENT_LONGITUDE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string DEPLOYMENT_LONGITUDE</p>
+</div>
+<div class="paragraph">
+<p>long_name = “longitude of deployment”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+</tbody>
+</table>
+<div class="ulist">
+<ul>
+<li>
+<p><a id="section"></a>
+==</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_field_comparison_information">Field comparison information</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLE NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">FIELD_COMPARISON_REFERENCE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>String FIELD_COMPARISON_REFERENCE:</p>
+</div>
+<div class="paragraph">
+<p>FIELD_COMPARISON_REFERENCE:long_name = “links (uri or url) to supplementary data that can provide field comparison for platform sensors.”;</p>
+</div>
+<div class="paragraph">
+<p>FIELD_COMPARISON_REFERENCE:comment = “multiple links are separated by a comma”</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Note: FIELD_COMPARISON_REFERENCE is applicable to deployment, recovery, and delayed versions.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_hardware_information">Hardware information</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLE NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GLIDER_FIRMWARE_VERSION</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string GLIDER_FIRMWARE_VERSION</p>
+</div>
+<div class="paragraph">
+<p>GLIDER_FIRMWARE_VERSION:long_name = “version of the internal glider firmware”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">LANDSTATION_VERSION</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string LANDSTATION_VERSION</p>
+</div>
+<div class="paragraph">
+<p>LANDSTATION_VERSION:long_name = “version of the server onshore”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BATTERY_TYPE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string BATTERY_TYPE</p>
+</div>
+<div class="paragraph">
+<p>BATTERY_TYPE:long_name = “type of the battery”;</p>
+</div>
+<div class="paragraph">
+<p>BATTERY_TYPE:battery_type_vocabulary = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">BATTERY_PACK</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string BATTERY_PACK</p>
+</div>
+<div class="paragraph">
+<p>BATTERY_PACK:long_name = “battery packaging”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">suggested</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="_telecom_information">Telecom information</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLE NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TELECOM_TYPE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string TELECOM_TYPE</p>
+</div>
+<div class="paragraph">
+<p>TELECOM_TYPE:long_name = “type of telecommunication systems used by the glider”;</p>
+</div>
+<div class="paragraph">
+<p>TELECOM_TYPE:telecom_type_vocabulary = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">TRACKING_SYSTEM</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string TRACKING_SYSTEM</p>
+</div>
+<div class="paragraph">
+<p>TRACKING_SYSTEM:long_name = “type of tracking systems used by the glider”;</p>
+</div>
+<div class="paragraph">
+<p>TRACKING_SYSTEM:tracking_system_vocabulary = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_phase_variable">Phase variable</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>PHASE describes the glider behaviors when at sea. The different behaviors are described in the phase vocabulary (ascent, descent, surfacing, parking, inflection, etc.)</p>
+</div>
+<div class="paragraph">
+<p>Note that the vocabulary will be fully described and implemented in the control vocabulary tool during the implementation phase.</p>
+</div>
+<div class="paragraph">
+<p>Phase calculation methodologies need publishing as a best practice document separately to the OG1.0 terms of reference.</p>
+</div>
+<div class="paragraph">
+<p>The tables below describe the mandatory information to PHASE stored in two ways.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLES NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PHASE</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Byte PHASE(N_MEASUREMENTS)</p>
+</div>
+<div class="paragraph">
+<p>PHASE:long_name = “behavior of the glider at sea”;</p>
+</div>
+<div class="paragraph">
+<p>PHASE:phase_vocabulary: “url to phase vocab list”;</p>
+</div>
+<div class="paragraph">
+<p>PHASE:_FillValue = 0b ;</p>
+</div>
+<div class="paragraph">
+<p>PHASE:phase_calculation_method = “”;</p>
+</div>
+<div class="paragraph">
+<p>PHASE:phase_calculation_method_vocabulary = “”;</p>
+</div>
+<div class="paragraph">
+<p>PHASE:phase_calculation_method_doi = “”;</p>
+</div>
+<div class="paragraph">
+<p>PHASE: ancillary_variables = "PHASE_QC"</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Highly desirable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PHASE_QC</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Byte PHASE_QC(N_MEASUREMENTS)</p>
+</div>
+<div class="paragraph">
+<p>PHASE_QC:long_name = "quality flag";</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Highly desirable</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Note 1: For a simple case, PHASE calculation is relatively easy. But in some cases, PHASE calculation remains difficult. When code will be available publicly and described in some published best practices, PHASE will become mandatory. Note 2: Quality control of the PHASE could be useful to manage difficult cases.</p>
+</div>
+<div class="paragraph">
+<p>Note 3: PHASE is used to derive data product (profile, trajectory profiles, gridded product) from OG1.0 data sets. It is recommended to include PHASE when possible.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_sensor_information">Sensor information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A sensor is a device used to measure a physical parameter. Sensor outputs are provided in parameter counts and need to be converted into parameter physical units using a calibration equation. This conversion can be done onboard the float or during the decoding process.</p>
+</div>
+<div class="paragraph">
+<p>This section contains information about the sensors of the glider. Each ocean state variable to be recorded must be described with its sensor. Gears with multiple sensors (i.e. CTD) should consider separated sensors in particular if there is not a unique serial number and calibration date for the sensors.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLE NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SENSOR</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string SENSOR(N_SENSOR)</p>
+</div>
+<div class="paragraph">
+<p>SENSOR:long_name = “Terms describing sensor types”;</p>
+</div>
+<div class="paragraph">
+<p>SENSOR:sensor_vocabulary = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SENSOR_MAKER</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string SENSOR_MAKER(N_SENSOR) SENSOR_MAKER:long_name = “manufacturer of the sensor”;</p>
+</div>
+<div class="paragraph">
+<p>SENSOR_MAKER:sensor_maker_vocabulary =“”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SENSOR_MODEL</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string SENSOR_MODEL(N_SENSOR)</p>
+</div>
+<div class="paragraph">
+<p>SENSOR_MODEL:long_name = “model of the sensor”;</p>
+</div>
+<div class="paragraph">
+<p>SENSOR_MODEL:sensor_model_vocabulary = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Highly desirable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SENSOR_SERIAL_NUMBER</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string SENSOR_SERIAL_NUMBER(N_SENSOR)</p>
+</div>
+<div class="paragraph">
+<p>SENSOR_SERIAL_NUMBER:long_name = “serial number of the sensor”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SENSOR_CALIBRATION_DATE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">string SENSOR_CALIBRATION_DATE(N_SENSOR) SENSOR_CALIBRATION_DATE:long_name = “date of calibration of the sensor”;</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable - ISO 8601</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_parameters_information">Parameter’s information</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A parameter is a measurement of a physical phenomenon; it can be provided by a sensor (in sensor counts or in physical units) or computed (derived) from other parameters. A sensor can measure 1 to N parameter(s). A parameter can be measured by 1 or N sensor(s).</p>
+</div>
+<div class="paragraph">
+<p>This section contains information about the parameters measured by the glider or derived from glider measurements.</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLE NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PARAMETER</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string PARAMETER(N_PARAM)</p>
+</div>
+<div class="paragraph">
+<p>PARAMETER:long_name = “name of parameter computed from glider measurements”;</p>
+</div>
+<div class="paragraph">
+<p>PARAMETER:parameter_vocabulary = “https://vocab.nerc.ac.uk/collection/OG1/current/[<em><a href="https://vocab.nerc.ac.uk/collection/OG1/current/" class="bare">https://vocab.nerc.ac.uk/collection/OG1/current/</a></em>]”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PARAMETER_SENSOR</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string PARAMETER_SENSOR(N_PARAM)</p>
+</div>
+<div class="paragraph">
+<p>PARAMETER_SENSOR:long_name = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">PARAMETER_UNITS</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>string PARAMETER_UNITS(N_PARAM) PARAMETER_UNITS:long_name = “”;</p>
+</div>
+<div class="paragraph">
+<p>PARAMETER_UNITS:parameter_units_vocabulary = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">highly desirable</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<h1 id="_geophysical_variables" class="sect0">Geophysical variables</h1>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>VARIABLE NAME</strong></th>
+<th class="tableblock halign-left valign-top"><strong>variable attributes</strong></th>
+<th class="tableblock halign-left valign-top"><strong>requirement status</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PARAM&gt;</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>float &lt;PARAM&gt;(N_MEASUREMENT);</p>
+</div>
+<div class="paragraph">
+<p>&lt;PARAM&gt;:long_name = "&lt;X&gt;"; &lt;PARAM&gt;:standard_name = “&lt;X&gt;";</p>
+</div>
+<div class="paragraph">
+<p>&lt;PARAM&gt;:vocabulary = “https://vocab.nerc.ac.uk/collection/OG1/current/[<em><a href="https://vocab.nerc.ac.uk/collection/OG1/current/" class="bare">https://vocab.nerc.ac.uk/collection/OG1/current/</a></em>]";</p>
+</div>
+<div class="paragraph">
+<p>&lt;PARAM&gt;:_FillValue = &lt;X&gt;;</p>
+</div>
+<div class="paragraph">
+<p>&lt;PARAM&gt;:units = "&lt;X&gt;";</p>
+</div>
+<div class="paragraph">
+<p>&lt;PARAM&gt;:ancillary_variables = "PARAM_QC"</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>mandatory</p>
+</div>
+<div class="paragraph">
+<p>&lt;PARAM&gt; contains the values of a parameter listed in the control vocabulary related to OceanGliders parameters.</p>
+</div>
+<div class="paragraph">
+<p>&lt;X&gt;: these fields are specified in the control vocabularies.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">&lt;PARAM&gt;_QC</p></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Byte &lt;PARAM&gt;_QC(N_MEASUREMENT); &lt;PARAM&gt;_QC:long_name = "quality flag";</p>
+</div>
+<div class="paragraph">
+<p>&lt;PARAM&gt;_QC:FillValue = " ";</p>
+</div>
+<div class="paragraph">
+<p>&lt;PARAM&gt;_QC:RTQC_methodology = “”;</p>
+</div>
+<div class="paragraph">
+<p>vocabulary = "";</p>
+</div>
+<div class="paragraph">
+<p>&lt;PARAM&gt;_QC:RTQC_methodology_vocabulary = “”;</p>
+</div>
+<div class="paragraph">
+<p>&lt;PARAM&gt;_QC:RTQC_methodology_doi = “”;</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">mandatory</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>Note: It is anticipated to upgrade the ancillary variable related to QC by refining the ancillary variable name like &lt; PARAM &gt;_qc_generic, &lt; PARAM &gt;_qc_spike_test, &lt;PARAM&gt;_qc_land_test, etc.</p>
+</div>
+<div class="sect1">
+<h2 id="_control_vocabularies">Control vocabularies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A list of vocabularies of this format is controlled for harmonization across multiple stakeholders. The different collections with hosts and managers are listed below.</p>
+</div>
+<div class="paragraph">
+<p>Control vocabularies will cover the metadata listed in the table (with a summary of existing candidate vocabularies and proposed governance):</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+<col style="width: 20%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"><strong>Metadata field</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Vocabulary exists</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Link to vocabulary</strong></th>
+<th class="tableblock halign-left valign-top"><strong>host</strong></th>
+<th class="tableblock halign-left valign-top"><strong>Possible governance</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">platform</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://vocab.nerc.ac.uk/collection/L06/current/25/"><em>https://vocab.nerc.ac.uk/collection/L06/current/25/</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">oceangliders_site</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanOPS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">contributors_role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">agencies_role</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">agencies_id</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://edmo.seadatanet.org/"><em>https://edmo.seadatanet.org/</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maris</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SeaDataNet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">naming_authority</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://edmo.seadatanet.org/"><em>https://edmo.seadatanet.org/</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maris</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SeaDataNet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">institution</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://edmo.seadatanet.org/"><em>https://edmo.seadatanet.org/</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Maris</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">SeaDataNet</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">rtqc_method</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">phase_calculation_methodology</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">platform_type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">platform_model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ICES_code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">? (ICES / NVS)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ICES</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">platform_maker</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">battery_type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">telecom_type</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">tracking_system</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">sensor_model</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">data_mode</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">?</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">phase</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">No</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">variable names</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">NVS</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">OceanGliders</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p><em>Notes:</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Units are a special case to be discussed because the convention in GOOS is UD units which are a conflation of observed property and measurement scale. UD units are available in spreadsheet form but not on a vocabulary server. Efforts are ongoing in the internal community to harmonize a common unit&#8217;s vocabulary.</p>
+</li>
+<li>
+<p>A sustainable model to resource the development and ongoing maintenance of vocabularies will need to be identified during the implementation phase of the OG1.0.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Vocabularies will be fully defined during the implementation phase of the OG1.0. The current version of the vocabulary collections is available here: <a href="https://docs.google.com/document/d/1dN90xkw9oCbLs0sPPhOmszdOjLpwcqxiK5mjeZP7abA/edit?usp=sharing"><em>OG1 - Vocabulary Collection</em></a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_best_practices">Best practices</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>[[<em>heading=h.3whwml4]]Methodologies used to compute OG1.0 format need publishing as best practices document in the IODE Ocean Best Practice repository (<a href="https://repository.oceanbestpractices.org/">_https://repository.oceanbestpractices.org/</em></a>) under the community “OceanGliders” and the collection “data management”. It covers the following topic:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Interpolation methodologies</p>
+</li>
+<li>
+<p>PHASE computing methodologies</p>
+</li>
+<li>
+<p>RTQC methodologies</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Methodologies should describe the computation methods used by DAC to produce the data set. Methodologies should have a DOI and be labialized as “OceanGliders practices” by the OceanGliders data management task team.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_evolution_process_the_inclusion_of_new_variables">Evolution process, the inclusion of new variables.</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Management of the evolution of the format will be organized by the OceanGliders data management team.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_reporting">Reporting</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The meeting will be organized (every 6 months?) with DACs to report about the implementation process until September 2023.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_agenda">Agenda</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><em>Agreement on the Term of Reference</em>: 3 months – Jan 2021 – March 2021</p>
+</div>
+<div class="paragraph">
+<p>A proposal will be delivered by the working group on December 14<sup>th</sup> for endorsement by the OceanGliders steering committee.</p>
+</div>
+<div class="paragraph">
+<p>The OG1.0 ToR will be addressed to the OceanGliders community for questions and feedback for 3 months.</p>
+</div>
+<div class="paragraph">
+<p>Our working group will agree on a final version of the common format.</p>
+</div>
+<div class="paragraph">
+<p><em>Implementation phase</em>: 18 months – April 2021 to Oct 2022</p>
+</div>
+<div class="paragraph">
+<p>During the implementation phase, operators, DACs and GDACs will develop tools and procedures to produce real-time gliders data files compliant with OG1.0 requirements described in the ToR.</p>
+</div>
+<div class="paragraph">
+<p>Regular meetings (frequency to be discussed) will be organized by the data management task team and DACs to evaluate progress in the different steps of the implementation phase.</p>
+</div>
+<div class="paragraph">
+<p>The OceanGliders data management team will agree on vocabulary collection.</p>
+</div>
+<div class="paragraph">
+<p><em>Operational phase:</em> 3 months – Oct 2022 to Dec 2023</p>
+</div>
+<div class="paragraph">
+<p>2 years after the agreement on the Terms of Reference OG1.0 will become the unique format for the OceanGliders program.</p>
+</div>
+<div class="paragraph">
+<p>[[_heading=h.1egqt2p]]Glider missions not delivering OG1.0 will not be considered as part of the OceanGliders program. It will be encouraged that legacy files be converted and added to OceanGliders final repository</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples">Appendix A: Examples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="ProgramNetworkSite-example">Program, network, and site</h3>
+<div class="paragraph">
+<p>Example 1:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>platform (i.e. glider mission): kraken_20210205</p>
+</li>
+<li>
+<p>Program: MOOSE glider program</p>
+</li>
+<li>
+<p>Site: MOOSE_T00, MOOSET_02</p>
+</li>
+<li>
+<p>Networks: Mediterranean Ocean Observing Systems for the Environment (MOOSE), Boundary Ocean Observing Network (BOON), OceanGliders Water Transformation task team”</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example 2:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>platform: sdeep09_sdeep04_20200929</p>
+</li>
+<li>
+<p>Program: SOCIB Glider Programme</p>
+</li>
+<li>
+<p>Site: Canales</p>
+</li>
+<li>
+<p>Network: Boundary Ocean Observing Network (BOON)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example 3:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>platform: SG669-20210617</p>
+</li>
+<li>
+<p>Program: NOAA Hurricane Glider program</p>
+</li>
+<li>
+<p>Site: NPR1 (North Puerto Rico 1)</p>
+</li>
+<li>
+<p>Networks: Integrated Ocean Observing System (IOOS), Caribbean Coastal Ocean Observing System (CARICOOS), Boundary Ocean Observing Network (BOON), OceanGliders Storms, AtlantOS</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example 4:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>platform: sp058-20210812T1703</p>
+</li>
+<li>
+<p>Program: Scripps glider program</p>
+</li>
+<li>
+<p>Site: CUGN90</p>
+</li>
+<li>
+<p>Network: Integrated Ocean Observing System (IOOS), Southern California Coastal Ocean Observing System (SCCOOS), California Network Spray Program, California Underwater Glider Network (CUGN), Boundary Ocean Observing Network (BOON)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example 5:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>platform: ce_917-20210730</p>
+</li>
+<li>
+<p>Program: OOI - Coastal and Endurance array</p>
+</li>
+<li>
+<p>Site: OOI - Newport Harbor Inshore Line,  OOI - Newport Harbor offshore Line</p>
+</li>
+<li>
+<p>Network: Ocean Observatories Initiative (OOI), Northwest Association of Networked Ocean Observing Systems (NANOOS), Boundary Ocean Observing Network (BOON)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example 6:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>platform: SL287 - StormBay-15Apr21</p>
+</li>
+<li>
+<p>Program: Integrated Marine Observing System - Glider</p>
+</li>
+<li>
+<p>Site: no site</p>
+</li>
+<li>
+<p>Network: IMOS</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example 7:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>platform: stella_20180207</p>
+</li>
+<li>
+<p>Program: MARS Glider program</p>
+</li>
+<li>
+<p>Site: no site</p>
+</li>
+<li>
+<p>Network: Alter_ECO</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. NetCDF-3 does not satisfy the requirements of OG1.0 format
+</div>
+<div class="footnote" id="_footnotedef_2">
+<a href="#_footnoteref_2">2</a>. <a href="http://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#trajectory-data" class="bare">http://cfconventions.org/Data/cf-conventions/cf-conventions-1.8/cf-conventions.html#trajectory-data</a>
+</div>
+</div>
+<div id="footer">
+<div id="footer-text">
+Last updated 2022-08-01 11:21:55 +0200
+</div>
+</div>
+</body>
+</html>
