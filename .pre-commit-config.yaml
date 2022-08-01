@@ -7,4 +7,11 @@ repos:
       language: system
       always_run: true
 
+- repo: local
+  hooks:
+    - id: asciidoctor-git
+      name: asciidoctor-git
+      entry: git add OG_Format.pdf
+      language: system
+      always_run: true
 
