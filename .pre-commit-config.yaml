@@ -1,0 +1,10 @@
+repos:
+- repo: local
+  hooks:
+    - id: asciidoctor
+      name: asciidoctor
+      entry: asciidoctor-pdf OG_Format.adoc
+      language: system
+      always_run: true
+
+
