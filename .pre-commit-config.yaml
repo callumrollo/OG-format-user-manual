@@ -5,3 +5,9 @@
       entry: asciidoctor OG_Format.adoc
       language: system
       always_run: true
+
+    - id: addascidoc
+      name: addascidoc
+      entry: git add OG_Format.html
+      language: system
+      always_run: true
