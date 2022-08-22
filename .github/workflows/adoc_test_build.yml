@@ -1,4 +1,4 @@
-name: Export and publish document
+name: Export and publish draft document
 
 on: pull_request
 
