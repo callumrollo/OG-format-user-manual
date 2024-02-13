@@ -1,0 +1,6 @@
+= Example
+:reproducible:
+
+This is a basic AsciiDoc document by Callum Rollo.
+
+We could put stuff in here like extra appendices, more history, part versions of the format etc.
