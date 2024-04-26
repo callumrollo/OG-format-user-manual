@@ -5,7 +5,11 @@
 Here we review issues related to OceanGliders (OG) format and vocabularies.
 A discussion section is also available for any question or comment related to OG format and vocabulary.
 
-[Here](https://oceangliderscommunity.github.io/OG-format-user-manual/) is the most recent version of the user manual. 
+[Here](https://callumrollo.github.io/OG-format-user-manual/OG_Format.html) is the most recent version of the user manual. 
+
+Vocabulary guidance for the OG format is [here](https://callumrollo.github.io/OG-format-user-manual/vocabularyCollection/tableOfControlledVocab.html)
+
+The history of the format is documented on the [history page](https://callumrollo.github.io/OG-format-user-manual/history.html)
 
 ### Example files
 
